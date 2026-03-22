@@ -1,3 +1,4 @@
+**这是一个100%vibecoding项目**
 # Whisper 字幕工具
 
 这是一个面向 Windows 的本地字幕工具，基于 OpenAI Whisper，提供图形界面，支持：
