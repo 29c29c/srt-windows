@@ -56,6 +56,28 @@ conda install ffmpeg -c conda-forge
 C:\Users\29c\miniconda3\envs\whisper-env\Library\bin\ffmpeg.exe
 ```
 
+---
+#### 这里如果报错：
+0.激活虚拟环境
+
+conda activate "whisper-env"
+
+1.添加 conda-forge 频道并设置优先级：
+
+conda config --add channels conda-forge
+
+conda config --set channel_priority strict
+
+2.安装 GTK3 相关包：
+
+conda install gtk3
+
+3.安装FFmpeg
+
+conda install -c conda-forge ffmpeg
+
+---
+
 ### 1.5 安装 Whisper
 
 在 `whisper-env` 环境中安装：
