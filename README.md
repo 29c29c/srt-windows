@@ -10,6 +10,11 @@
 - 日语字幕生成
 - 接入 OpenAI 兼容翻译 Provider 做字幕翻译
 
+当前支持的媒体格式：
+
+- 可提取为 `mp3` 的视频格式：`mp4`、`mov`、`mkv`、`avi`、`webm`、`rmvb`
+- 可直接生成字幕的音频格式：`mp3`、`wav`、`m4a`、`aac`、`flac`、`ogg`
+
 当前项目已经固定使用 Conda 环境 `whisper-env`。程序启动、Whisper 调用、`ffmpeg` 调用都会优先使用这个环境。
 
 ## 1. 环境安装
@@ -44,7 +49,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 ### 1.4 安装 ffmpeg
 
-`mp4 -> mp3` 转换依赖 `ffmpeg`。请在 `whisper-env` 环境中安装：
+视频提取音频并转换为 `mp3` 依赖 `ffmpeg`。请在 `whisper-env` 环境中安装：
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -165,6 +170,8 @@ conda activate "whisper-env"
 ### 3.2 只做视频转 MP3
 
 适合先把视频里的音频提取出来单独使用。
+
+当前可提取为 `mp3` 的输入视频格式：`mp4`、`mov`、`mkv`、`avi`、`webm`、`rmvb`
 
 步骤：
 

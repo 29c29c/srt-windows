@@ -34,7 +34,7 @@ DEFAULT_SYSTEM_PROMPT = (
     "breaks when they help readability, and do not add explanations."
 )
 
-VIDEO_EXTENSIONS = {".mp4", ".mov", ".mkv", ".avi", ".webm"}
+VIDEO_EXTENSIONS = {".mp4", ".mov", ".mkv", ".avi", ".webm", ".rmvb"}
 AUDIO_EXTENSIONS = {".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | AUDIO_EXTENSIONS
 APP_FFMPEG_CANDIDATES = [
@@ -837,7 +837,7 @@ class SubtitleGUI:
     def add_files(self) -> None:
         filenames = filedialog.askopenfilenames(
             title="选择媒体文件",
-            filetypes=[("媒体文件", "*.mp4 *.mov *.mkv *.avi *.webm *.mp3 *.wav *.m4a *.aac *.flac *.ogg")],
+            filetypes=[("媒体文件", "*.mp4 *.mov *.mkv *.avi *.webm *.rmvb *.mp3 *.wav *.m4a *.aac *.flac *.ogg")],
         )
         if not filenames:
             return

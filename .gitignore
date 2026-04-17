@@ -1,0 +1,4 @@
+.subtitle_gui_config.json
+__pycache__/
+.DS_Store
+output/
